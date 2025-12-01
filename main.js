@@ -68,7 +68,7 @@ function notify(msg, timeout = 3000) {
 }
 
 function resolveIPFS(url) {
-  if (!url) return "https://i.postimg.cc/Hng3NRg7/Steptract-Logo.png";
+  if (!url) return "ipfs://QmWxidQSTpbJgbZxkNBuztAuzgTpueXe4LSmUraZXCf4v8/";
   const GATEWAY = "https://cloudflare-ipfs.com/ipfs/";
   let originalUrl = url;
   if (url.startsWith("ipfs://")) {
@@ -320,7 +320,7 @@ async function loadNFTs() {
       card.innerHTML = `
         ${checkboxHTML}
         <div class="card-image-wrapper">
-            <img src="${image}" loading="lazy" decoding="async" onerror="this.src='https://i.postimg.cc/Hng3NRg7/Steptract-Logo.png'">
+            <img src="${image}" loading="lazy" decoding="async" onerror="this.src='ipfs://QmWxidQSTpbJgbZxkNBuztAuzgTpueXe4LSmUraZXCf4v8/'">
         </div>
         <div class="card-content">
             <div class="card-title">${name}</div>
